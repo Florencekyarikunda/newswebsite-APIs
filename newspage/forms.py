@@ -6,3 +6,5 @@ class NewsForm(forms.ModelForm):
         model=Sources
         model = Articles
         fields="__all__"
+
+        

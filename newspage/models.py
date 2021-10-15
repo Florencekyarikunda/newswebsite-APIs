@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.base import Model
 
 class Sources(models.Model):
     id = models.CharField(max_length=300, primary_key=True)
@@ -19,3 +18,4 @@ class Articles(models.Model):
     url=models.URLField()
     image=models.ImageField()
     date= models.DateField()
+
