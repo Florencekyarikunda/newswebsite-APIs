@@ -3,8 +3,8 @@ from .models import Articles, Sources
 
 class NewsForm(forms.ModelForm):
     class Meta:
-        model=Sources
         model = Articles
+        model = Sources
         fields="__all__"
 
         

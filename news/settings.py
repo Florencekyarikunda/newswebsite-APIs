@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-9%^$8z&q!6ukt6wi98)18onz#5=_u7fj@s)-y212sr043es+qm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com']
 
 # Application definition
 
@@ -138,6 +138,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+ 
