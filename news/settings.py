@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'newspage',
     'macros',
-    'bootstrap4',
+    
+    
 ]
 
 MIDDLEWARE = [
