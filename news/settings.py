@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'newspage',
     'macros',
-    
-    
+    # 'register',
+    # 'login',
+      
 ]
 
 MIDDLEWARE = [
@@ -134,7 +135,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+LOGIN_REDIRECT_URL='newspage'
+ACCOUNT_EMAIL_REQUIRED=True
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

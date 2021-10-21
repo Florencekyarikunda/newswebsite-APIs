@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.contrib.admin.sites import site
 from django.urls import path
 from django.conf import settings
+from django import views as user_views
 from django.urls.conf import include
 from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
@@ -24,7 +25,10 @@ from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newspage.urls')),
-    
+    # path('login/', include('login.urls')),
+    # path('register/', user_views.register, name='register'),
+    # path('livestream/', include('livestream.urls')),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()
