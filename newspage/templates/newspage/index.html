@@ -14,7 +14,7 @@
   .navbars{
     display: flex;
     float: right;
-    font-size: 0%;
+    /* font-size: 20px; */
    }
 /* .row{
   position: relative;
@@ -29,10 +29,9 @@ height: 300px;
 padding: 20px;
 }
 
-.mynav{
-  padding-bottom: 100%;
-  top: 100%;
-  justify-content: center;
+.mynavs{
+  font-size: 20px;
+ 
   
 }
 .container{
@@ -40,13 +39,19 @@ padding: 20px;
   /* justify-content: center; */
   text-align: center;
 }
+ /* .navbar-header{
+   padding-top: 50px; 
+}
+ .navbar-collapse{
+   padding-top: 50px; 
+}   */
 </style>
 </head>
 <body>
   
 <div class="mynavs">
   <div class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
+  <!-- <div class="container-fluid"> -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -60,6 +65,7 @@ padding: 20px;
           <ul class="nav navbar-nav">
             <li><a href="/">Go Back</a></li>
           </div>
+        
         <div class="navbars">
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -74,7 +80,7 @@ padding: 20px;
               <li><a href="/">Login</a></li>
             </div>
       </div>
-      </div>
+    </div>
     </div>
 </div>
 
@@ -148,7 +154,6 @@ padding: 20px;
   </div>
 {%endfor%}
 </div>
-
 
 <!-- Sports News Sources  -->
 

@@ -6,9 +6,12 @@ app_name='newspage'
 
 
 urlpatterns=[
+
+        
         path('', views.home, name="home"),
         path("articles/",views.articles,name="articles"),
-        # path("sources/",views.sources,name="sources"),
-        # path("register", views.register_request, name="register")
+        # path("articles/<str:id>",views.articles,name="articles"),
 
-        ]
+        # path("sources/",views.sources,name="sources"),
+        
+]

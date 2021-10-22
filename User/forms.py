@@ -1,13 +1,13 @@
-from django import forms
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
-from .models import  Sources,Articles
+# from django import forms
+# from django.contrib.auth.models import User
+# from django.contrib.auth.forms import UserCreationForm
+# # from .models import  Sources,Articles
 
-class NewsForm(forms.ModelForm):
-    class Meta:
-        # model = Articles
-        # model = Sources
-        fields="__all__"
+# # class NewsForm(forms.ModelForm):
+# #     class Meta:
+# #         model = Articles
+# #         model = Sources
+# #         fields="__all__"
 
 
 # class CustomUserCreationForm(UserCreationForm):

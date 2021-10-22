@@ -1,13 +1,51 @@
 from requests.api import request
-# from news import newspage
+# import newspage
 from .requests import get_sources, get_articles
-from django.shortcuts import render
+# from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import render, redirect
 import requests 
+from django.contrib.auth.decorators import login_required
+# from .forms import CustomUserCreationForm
 
 
 
 API_KEY="56082198622f4891923b76a2fda0c2e8"
 
+# def loginUser(request):
+#     newspage = 'login'
+#     if request.method == 'POST':
+#         username = request.POST['username']
+#         password = request.POST['password']
+
+#         user = authenticate(request, username=username, password=password)
+  
+#     if user is not None:
+#          login(request,user)
+#          return redirect('newspage')
+#     return render(request,"newspage/login_register.html", {'newspage':newspage})
+   
+# def logoutUser(request):
+#     logout(request)
+#     return redirect('login')
+
+# def registerUser(request):
+#     newpage = 'register'
+#     form = CustomUserCreationForm()
+#     if request.method == 'POST':
+#         form = CustomUserCreationForm(request.POST)
+#         if form.is_valid():
+#             user = form.save(commit=False)
+#             user.save()
+
+#         if user is not None:
+#             if user is not None:
+#                 login(request, user)
+#                 return redirect('newspage')
+
+#     context = {'form': form, 'newspage': newspage}
+#     return render(request, 'newspage/login_register.html', context)
+
+# @login_required(login_url='login')
 def home(request):
     sources = get_sources('business')
     sports_sources = get_sources('sports')

@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'newspage',
     'macros',
-    # 'register',
-    # 'login',
+    'User',
       
 ]
 

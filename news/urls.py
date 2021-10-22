@@ -25,9 +25,6 @@ from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('newspage.urls')),
-    # path('login/', include('login.urls')),
-    # path('register/', user_views.register, name='register'),
-    # path('livestream/', include('livestream.urls')),
 
 ]
 
