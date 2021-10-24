@@ -8,7 +8,7 @@
     <div class="col-md-3">
       <div class="thumbnail">
         <a href="{{articles.url}}" target="_blank" >
-          <img src="{{articles.image}}" alt="{{articles.title}}" class="img-responsive" styles="height:30px">
+          <img src="{{articles.urlToImage}}" alt="{{articles.title}}" class="img-responsive" styles="height:30px">
         </a>
         <div class="caption">
           <h4><a href="{{articles.url}}" target="_blank">{{articles.title }}</a></h4>
@@ -17,7 +17,7 @@
         </div>
 
       <div class="footer">
-          Published at: {{articles.date}}
+          Published at: {{articles.publishedAt}}
         </div>
       </div>
     </div>

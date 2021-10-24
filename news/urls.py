@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.contrib.admin.sites import site
 from django.urls import path
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 from django import views as user_views
 from django.urls.conf import include
 from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
@@ -24,9 +25,15 @@ from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('register/', user_views.register, name='register'),
+    # path('profile/', user_views.profile, name='profile'),
+    path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+    path('logout/', auth_views.LogoutView.as_view(template_name='registration/logout.html'), name='logout'),
     path('', include('newspage.urls')),
 
 ]
 
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

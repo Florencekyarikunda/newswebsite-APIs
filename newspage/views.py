@@ -1,4 +1,6 @@
 from requests.api import request
+
+from news import newspage
 # import newspage
 from .requests import get_sources, get_articles
 # from django.contrib.auth import authenticate, login, logout
@@ -45,7 +47,7 @@ API_KEY="56082198622f4891923b76a2fda0c2e8"
 #     context = {'form': form, 'newspage': newspage}
 #     return render(request, 'newspage/login_register.html', context)
 
-# @login_required(login_url='login')
+# @login_required
 def home(request):
     sources = get_sources('business')
     sports_sources = get_sources('sports')
@@ -57,7 +59,7 @@ def home(request):
     return render(request, 'newspage/index.html' ,{"title":title, "sources":sources, "sports_sources":sports_sources, "technology_sources":technology_sources, "entertainment_sources":entertainment_sources, "corona_sources":corona_sources})
 
 
-def articles(request):
+def articles(request,id):
     '''
     view articles page
     '''

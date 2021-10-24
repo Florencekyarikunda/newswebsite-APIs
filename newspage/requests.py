@@ -13,7 +13,7 @@ api_key = "56082198622f4891923b76a2fda0c2e8"
 base_url='https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
 
 # Getting the articlces url
-articles_url = 'https://newsapi.org/v2/sources?language=en&category={}&apiKey={}'
+articles_url = 'https://newsapi.org/v2/everything?language=en&sources={}&apiKey={}'
 
 
 # def configure_request(newspage):

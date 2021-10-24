@@ -51,38 +51,24 @@ padding: 20px;
   
 <div class="mynavs">
   <div class="navbar navbar-inverse" role="navigation">
-  <!-- <div class="container-fluid"> -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <a class="navbar-brand" href="/">News</a>
+    <!-- <div class="container-fluid"> -->
+      <div class="navbar-header">
+          <a class="navbar-brand" href="/">News</a>
       </div>
-        <div class="navbar-collapse collapse">
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Go Back</a></li>
+          <li><a href="/">Live Stream</a></li>
+        </ul>
+      </div>  
+      <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/">Go Back</a></li>
-          </div>
-        
-        <div class="navbars">
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Live Stream</a></li>
-            </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Register</a></li>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Login</a></li>
-            </div>
+            <!-- <li><a href="/">Live Stream</a></li> -->
+          </ul>
       </div>
-    </div>
-    </div>
-</div>
+  </div>
+</div> 
+<!-- </header> -->
 
 <div class="container">
   <!-- Business News  -->
@@ -102,7 +88,7 @@ padding: 20px;
         <p>
          {{ source.description }}
         </p>
-        <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
+        <a href="/articles/{{ source.id }}" class="btn btn-info btn-sm">View Please</a>
       </div>
     </div>
   </div>
