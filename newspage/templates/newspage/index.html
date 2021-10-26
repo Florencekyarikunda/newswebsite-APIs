@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,21 +52,21 @@ padding: 20px;
   
 <div class="mynavs">
   <div class="navbar navbar-inverse" role="navigation">
-    <!-- <div class="container-fluid"> -->
       <div class="navbar-header">
+
           <a class="navbar-brand" href="/">News</a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="/">Go Back</a></li>
-          <li><a href="/">Live Stream</a></li>
+          <li><a href="{% url 'index' %}">Featured News</a></li>
         </ul>
       </div>  
-      <div class="navbar-collapse collapse">
+      <!-- <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <!-- <li><a href="/">Live Stream</a></li> -->
+            <li><a href="/">Live Stream</a></li>
           </ul>
-      </div>
+      </div> -->
   </div>
 </div> 
 <!-- </header> -->

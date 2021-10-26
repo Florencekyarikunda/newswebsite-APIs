@@ -1,10 +1,26 @@
 from django.shortcuts import render
 
-# Create your views here.
-# from django.shortcuts import render
-# from django.http import HttpResponse
-# from uploader.models import Videos
+from .mixins import YouTube
 
-# def home(request):
-#     videos = Videos.objects.all()
-#     return render(request, 'home_page.html', {'videos': videos[::-1]})
+'''
+Basic view for displaying videos 
+'''
+def videos(request):
+
+	videos = YouTube().get_data()
+
+	context = {"videos": videos}
+	return render(request, 'livestream/videos.html', context)
+
+
+'''
+Basic view for showing a video in an iframe 
+'''
+def play_video(request):
+
+	vid_id = request.GET.get("vid_id")
+	vid_data = YouTube(vid_id = vid_id).get_video()
+	context = {
+		"vid_data": vid_data,
+	}
+	return render(request, 'livestream/play_video.html', context)

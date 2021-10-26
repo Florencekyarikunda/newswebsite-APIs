@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'newspage',
     'macros',
+    'whitenoise',
+    'featurednews',
     'rest_framework',
+    'livestream',
+   
       
 ]
 
@@ -55,6 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'news.urls'
@@ -99,7 +106,7 @@ STATICFILES_DIRS = (
 )
 
 #  Add configuration for static files storage using whitenoise
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -139,9 +146,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 ACCOUNT_EMAIL_REQUIRED=True
 STATIC_URL = '/static/'
+MEDIA_URL='/images/'
 
-LOGIN_REDIRECT_URL = 'home'
-LOGIN_URL = 'login'
+STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+
+PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
+STATIC_ROOT  =   os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_URL = '/static/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -159,6 +170,4 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
 # django_heroku.settings(locals())
