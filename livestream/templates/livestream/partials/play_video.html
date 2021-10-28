@@ -9,16 +9,15 @@
 {% block extend_nav %} 
 
 <ul class="sidenav">
-  <li><a href="{% url 'main:videos' %}">Demo Videos</a></li>
+  <li><a href="{% url 'main:videos' %}">Videos</a></li>
   <li><a class="active" href="javascript:void(0)">Demo Play Video</a></li>
 </ul>
 
 {% endblock %}
 
-
 {% block content %}
 
-<h3 id="map">Django YouTube API Demo - Play Video</h3>
+<h3 id="map">Play Video</h3>
 
 <div class="container">
 
@@ -46,16 +45,7 @@
   </table>
   <br>
   {{vid_data.iframe|safe}}
-
-
 </div>
-
-
 {% endblock %}
-
 {% block extend_footer %}
-
-
-
-
-{% endblock %}
+{% endblock %

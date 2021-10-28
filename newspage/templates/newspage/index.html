@@ -46,14 +46,31 @@ padding: 20px;
  .navbar-collapse{
    padding-top: 50px; 
 }   */
+
+.nav-link{
+  list-style: none;
+  transform: none;
+  text-decoration: none;
+  padding-top: 0%;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
 </style>
 </head>
 <body>
   
-<div class="mynavs">
+<div class="mynavs">  
   <div class="navbar navbar-inverse" role="navigation">
-      <div class="navbar-header">
+    <img src="{{ 'static/images/logo.jpg'}}", class="center" alt="">
 
+      <div class="navbar-header">
           <a class="navbar-brand" href="/">News</a>
       </div>
       <div class="navbar-collapse collapse">
@@ -62,15 +79,17 @@ padding: 20px;
           <li><a href="{% url 'index' %}">Featured News</a></li>
         </ul>
       </div>  
-      <!-- <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="/">Live Stream</a></li>
-          </ul>
-      </div> -->
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2", style="float: right;">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/" >Live Stream</a>
+                <a class="nav-link" href="/">Contact Us</a>
+            </li>
+        </ul>
+    </div>
   </div>
 </div> 
 <!-- </header> -->
-
 <div class="container">
   <!-- Business News  -->
   <h3 class="text text-center">Business News Sources</h3>
@@ -89,7 +108,7 @@ padding: 20px;
         <p>
          {{ source.description }}
         </p>
-        <a href="/articles/{{ source.id }}" class="btn btn-info btn-sm">View Please</a>
+        <a href="{{ source.url }}" class="btn btn-info btn-sm">View Please</a>
       </div>
     </div>
   </div>

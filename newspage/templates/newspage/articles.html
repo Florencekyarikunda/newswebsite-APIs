@@ -4,14 +4,15 @@
   <h3>News Headlines</h3>
   {% for article_row in articles %}
   <div class="row">
-    {% for article in articles %}
+    {% for article in article_row %}
     <div class="col-md-3">
       <div class="thumbnail">
         <a href="{{article.url}}" target="_blank" >
-          <img src="{{article.urlToImage}}" alt="{{articles.title}}" class="img-responsive" styles="height:30px">
+          <img src="{{article.image}}" alt="{{article.title}}" class="img-responsive" styles="height:30px">
         </a>
+
         <div class="caption">
-          <h4><a href="{{article.url}}" target="_blank">{{articles.title }}</a></h4>
+          <h4><a href="{{article.url}}" target="_blank">{{article.title }}</a></h4>
           <p>{{articles.description }}</p>
           <a href="{{article.url}}" target="_blank"> Read More</a>
         </div>
